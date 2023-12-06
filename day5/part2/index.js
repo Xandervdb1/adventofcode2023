@@ -59,18 +59,13 @@ const calcLocation = (pSeed) => {
             //maps[i][j]
             if (pSeed >= maps[i][j][0] && pSeed <= maps[i][j][1]) {
                 pSeed = pSeed + maps[i][j][2];
-                mustContinue = true;
                 break;
             }
-        }
-        if (mustContinue) {
-            mustContinue = false;
-            continue;
         }
     }
     if (min === undefined) {
         min = pSeed;
     } else if (pSeed < min) {
-        min = pSeed
+        min = pSeed;
     }
 }
