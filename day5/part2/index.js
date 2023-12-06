@@ -1,4 +1,5 @@
 //this one takes ages don't ever run it again
+console.time("end");
 const fs = require("fs");
 const maps = [];
 let min = undefined;
@@ -50,6 +51,7 @@ fs.readFile("../data.txt", "utf-8", (err, data) => {
         }
     });
     console.log("The closest location is at: " + min);
+    console.timeEnd("end")
 });
 
 const calcLocation = (pSeed) => {
